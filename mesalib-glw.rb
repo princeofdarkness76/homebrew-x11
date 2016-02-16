@@ -6,9 +6,9 @@ class MesalibGlw < Formula
   bottle do
     cellar :any
     revision 1
-    sha1 "617a0490b723c28d7afc30742a7fde7e3aa56c81" => :yosemite
-    sha1 "a0ac2d5bd0d31aa471d63c6f81d304a107c03fc5" => :mavericks
-    sha1 "35df28b14aca921ef20e9bdd4db35c6c803e8561" => :mountain_lion
+    sha256 "4424506e107779a8236e61aa3aa3a1cbf6fe09f75fe8655257ac9ea82058870c" => :yosemite
+    sha256 "1a5f1a2480cb8ff04dc46cd59340f08d73daee7cecb2e37764ca6c23eec763b4" => :mavericks
+    sha256 "d25a1e8d2cfe313ae9b843ce6e85343a362b7331eb4d6a4e380548f97774932f" => :mountain_lion
   end
 
   depends_on :x11

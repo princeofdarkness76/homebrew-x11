@@ -1,4 +1,5 @@
 class Xpdf < Formula
+  desc "PDF viewer"
   homepage "http://www.foolabs.com/xpdf/"
   url "ftp://ftp.foolabs.com/pub/xpdf/xpdf-3.04.tar.gz"
   sha256 "11390c74733abcb262aaca4db68710f13ffffd42bfe2a0861a5dfc912b2977e5"

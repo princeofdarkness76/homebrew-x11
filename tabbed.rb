@@ -5,9 +5,9 @@ class Tabbed < Formula
 
   bottle do
     cellar :any
-    sha1 "dfd3264ddf73626663508e058a3ff417cacc9ddf" => :mavericks
-    sha1 "d6a1e8f8e4e719b89956a5ae4ebea916f7d81fed" => :mountain_lion
-    sha1 "823a4e327e626120283262116f15ee47cd0a3f6a" => :lion
+    sha256 "982a6ceb32c866fd0722a4b1f532f169997a78418aec07193560b38b1ddcadf0" => :mavericks
+    sha256 "978e35e95e15ced37893eda8d1c8398ec1bfc42cf3dd7abaef46fde79df3f999" => :mountain_lion
+    sha256 "63e94a93cdb84b3fda35acdd2833a0350d920fcebaf6256ace0201791e32aa12" => :lion
   end
 
   head "http://git.suckless.org/tabbed", :using => :git

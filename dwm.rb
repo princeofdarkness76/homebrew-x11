@@ -1,16 +1,16 @@
 class Dwm < Formula
+  desc "Dynamic window manager"
   homepage "http://dwm.suckless.org/"
-  url "http://dl.suckless.org/dwm/dwm-6.0.tar.gz"
-  sha256 "b2b9483de69259eeea56844899bb2385158d3e79a42d82b10c142099fc8eeb56"
+  url "http://dl.suckless.org/dwm/dwm-6.1.tar.gz"
+  sha256 "c2f6c56167f0acdbe3dc37cca9c1a19260c040f2d4800e3529a21ad7cce275fe"
+  head "http://git.suckless.org/dwm", :using => :git
 
   bottle do
-    cellar :any
-    sha1 "3d1f85077637d227005f7c22273441ec7eb4ded1" => :mavericks
-    sha1 "ef7ce38daa07fe707df2454a3ddf4701a4cebfe7" => :mountain_lion
-    sha1 "29c1feef59b6c7da94b096a9452a1e402037fba3" => :lion
+    cellar :any_skip_relocation
+    sha256 "282b0c844645209037152f2219861960c31c476158835b1992905737e6d67fec" => :el_capitan
+    sha256 "d6075b541f94f345c5b47ac85d07420bc2e9df895c5089360a252be37bca511e" => :yosemite
+    sha256 "af8a23a31af9503d57891be8baf20ae40467ae8c6366d6ec9bbbe960025e0a18" => :mavericks
   end
-
-  head "http://git.suckless.org/dwm", :using => :git
 
   depends_on :x11
   depends_on "dmenu" => :optional
@@ -35,5 +35,9 @@ class Dwm < Formula
     See also https://gist.github.com/311377 for a handful of tips and tricks
     for running dwm on Mac OS X.
     EOS
+  end
+
+  test do
+    assert_match /#{version}/, shell_output("#{bin}/dwm -v 2>&1", 1)
   end
 end

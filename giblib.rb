@@ -7,9 +7,9 @@ class Giblib < Formula
   bottle do
     cellar :any
     revision 1
-    sha1 "af84435cd0dd636b90b420c590cf7e1f57dee612" => :yosemite
-    sha1 "a58b8b515fc558f42b8b8ea6e427fb0af42355fe" => :mavericks
-    sha1 "4f3acb6bade2b18edddd1e3b9100a4a15368d6e2" => :mountain_lion
+    sha256 "e3e8ff19bb06a1b105e351e8c71f05a3ce92c57cc9f8f82f81d0a2f19b0f6edf" => :yosemite
+    sha256 "c4622a6c22f066411a69e824f3e3fbfa6d7713d44a5f05ada8058949745ceeb4" => :mavericks
+    sha256 "d326b3b552493bc46db47aeafca759afdf4e94db683445be4b3af6656fbd12b3" => :mountain_lion
   end
 
   depends_on :x11

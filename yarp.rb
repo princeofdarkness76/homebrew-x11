@@ -3,7 +3,6 @@ class Yarp < Formula
   homepage "http://yarp.it"
   url "https://github.com/robotology/yarp/archive/v2.3.64.tar.gz"
   sha256 "3882b38c39ec9c5fdd06c68f3a4ad21da718bd2733ed7d6a5fb78d9f36dad6b2"
-  head "https://github.com/robotology/yarp.git"
 
   bottle do
     revision 1
@@ -12,10 +11,20 @@ class Yarp < Formula
     sha256 "23dc0cb343be352df00207063314257f8c3eef8ee4f4622005f5183423799d8d" => :mountain_lion
   end
 
+  head do
+    url "https://github.com/robotology/yarp.git"
+
+    option "with-python", "Build with Python bindings"
+
+    depends_on "python" => :optional
+    depends_on "swig" if build.with? "python"
+  end
+
   option "with-qt5", "Build the Qt5 GUI applications"
   option "with-yarprun-log", "Build with yarprun_log support"
   option "with-opencv", "Build the opencv_grabber device"
   option "with-lua", "Build with Lua bindings"
+  option "with-python", "Build with Python bindings"
   option "with-serial", "Build the serial/serialport devices"
 
   depends_on "pkg-config" => :build
@@ -56,6 +65,11 @@ class Yarp < Formula
     if build.with? "serial"
       args << "-DENABLE_yarpmod_serial=ON"
       args << "-DENABLE_yarpmod_serialport=ON"
+    end
+
+    if build.head? && build.with?("python")
+      args << "-DYARP_COMPILE_BINDINGS=ON"
+      args << "-DCREATE_PYTHON=ON"
     end
 
     system "cmake", *args

@@ -1,12 +1,13 @@
 class Xspringies < Formula
+  desc "Interactive 2D mass/spring simulation system"
   homepage "http://www.cs.rutgers.edu/~decarlo/software.html"
   url "http://www.cs.rutgers.edu/~decarlo/software/xspringies-1.12.tar.Z"
   sha256 "08a3e9f60d1f1e15d38d62dd62baab18f6ad57ee139b0ef41452be66e4ad6a28"
 
   bottle do
-    sha1 "42c98753f4430639d961128d450c9d1ba01124a0" => :yosemite
-    sha1 "7a791f236b5738a666523d091686a015152677fb" => :mavericks
-    sha1 "23817a7161135c3a368d91e027133911802424a8" => :mountain_lion
+    sha256 "4aa08b7c42d919e43e3c77de4041b6eb5cfa4cc0df5fe655ec205914799ad4a3" => :yosemite
+    sha256 "8da39ce52288e954d550a8e2cdded080b85ea5bc0b46b2be23a4846dbaaeb6c4" => :mavericks
+    sha256 "6bab0692a63b42be11c18783b47ddb860c4c83feb3097f84c00ef28f9fcc79ca" => :mountain_lion
   end
 
   depends_on :x11

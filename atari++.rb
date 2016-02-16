@@ -1,4 +1,5 @@
 class Atarixx < Formula
+  desc "Unix-based emulator of the Atari 8 bit computers"
   homepage "http://www.xl-project.com"
   url "http://www.xl-project.com/download/atari++_1.72.tar.gz"
   sha256 "66c530896f87f53e0a450f9e0c659a4f01045177f6a81d8abb2f5bb42733dc48"
