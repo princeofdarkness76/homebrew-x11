@@ -1,13 +1,13 @@
 class RxvtUnicode < Formula
   homepage "http://software.schmorp.de/pkg/rxvt-unicode.html"
-  url "http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.21.tar.bz2"
-  mirror "https://mirrors.kernel.org/debian/pool/main/r/rxvt-unicode/rxvt-unicode_9.21.orig.tar.bz2"
-  sha256 "75270ed72bc5895a64a1d7392bf45a622204192371c3965bd3dd978dc088956b"
+  url "http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.22.tar.bz2"
+  sha256 "e94628e9bcfa0adb1115d83649f898d6edb4baced44f5d5b769c2eeb8b95addd"
 
   bottle do
-    sha256 "be8b99848a935c3c9e6b34cfb25fa1addd59785e00293dc65b9cbb0d03b50acd" => :yosemite
-    sha256 "fc878a8aa5e8df507ae86fb8faf0f8a8c4dff4f94397280b2d9371822cb1f217" => :mavericks
-    sha256 "3763b2807f304a53ab922874d9627adc41c6b4427f9f04787fe1825f28ce4430" => :mountain_lion
+    cellar :any_skip_relocation
+    sha256 "549e9850db54ea9716431a5151765da5f52c3272b16995c0bda5f9826a006061" => :el_capitan
+    sha256 "00c18d210b50c2426546a3df1dce51ac1dc1765c0e5df9901d40878c5bfa2804" => :yosemite
+    sha256 "7924f90b69286b7f57b7c8974d62917fff85829a9d1db0621a068a27b89f45b8" => :mavericks
   end
 
   option "without-iso14755", "Disable ISO 14775 Shift+Ctrl hotkey"
